@@ -1,0 +1,50 @@
+Listening to port 4567
+Connected!!!
+EKF: 
+Init done
+Estimate!!!0.312243
+ 0.58034
+       0
+       0
+CalculateRMSE
+CalculateRMSE
+Msg42["estimate_marker",{"estimate_x":0.312242686748505,"estimate_y":0.580339789390564,"rmse_vx":5.19993686676025,"rmse_vy":0.0,"rmse_x":0.287757337093353,"rmse_y":0.0196602344512939}]
+EKF: 
+PredictCalculateJacobian
+CalculateJacobian
+ 1.01489
+0.554329
+ 4.89281theta61.7495
+CalculatePolarCordinatesUpdateEKFRadar
+x_ =  35.9866
+  -18.22
+ 509.608
+-268.631
+P_ =   0.0188397   0.0342893  0.00441314 -0.00217457
+  0.0342893   0.0641216 -0.00217459  0.00154144
+ 0.00441314 -0.00217459     221.662    -119.214
+-0.00217457  0.00154144    -119.214     64.2309
+Estimate!!! 35.9866
+  -18.22
+ 509.608
+-268.631
+CalculateRMSE
+CalculateRMSE
+Msg42["estimate_marker",{"estimate_x":35.9865556462363,"estimate_y":-18.2199660547509,"rmse_vx":356.689635527506,"rmse_vy":189.951813795665,"rmse_x":24.8390613849281,"rmse_y":13.3077646337176}]
+EKF: 
+PredictUpdateLaser
+x_ = nan
+nan
+nan
+nan
+P_ = nan nan nan nan
+nan nan nan nan
+nan nan nan nan
+nan nan nan nan
+Estimate!!!nan
+nan
+nan
+nan
+CalculateRMSE
+CalculateRMSE
+Msg42["estimate_marker",{"estimate_x":null,"estimate_y":null,"rmse_vx":null,"rmse_vy":null,"rmse_x":null,"rmse_y":null}]
