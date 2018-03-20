@@ -70,14 +70,11 @@ VectorXd KalmanFilter::CalculatePolarCordinates(const VectorXd &x_state) {
   
   float rho = sqrt(px*px+py*py);
   float theta = atan2(py,px); 
-  float rho_dot = (px*vx + py*vy)/rho;
+  float rho_dot;
 
-  if(fabs(rho) < 0.0001){
-    cout << "CalculatePolarCordinates () Error" << endl;
-    px += 0.01;
-    py += 0.01;
-    rho = sqrt(px*px+py*py);
-    theta = atan2(py,px); 
+  if (fabs(rho) < 0.0001) {
+    rho_dot = 0;
+  } else {
     rho_dot = (px*vx + py*vy)/rho;
   }
 
@@ -97,11 +94,11 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   VectorXd z_pred = CalculatePolarCordinates(x_);
   VectorXd y = z - z_pred;
 
-  if ( -(PI) >= y(1) )
+  if ( -(PI) > y(1) )
   {
     y(1) += 2 * PI;
   }
-  else if (PI <= y(1))
+  else if (PI < y(1))
   {
     y(1) -= 2 * PI;
   }
